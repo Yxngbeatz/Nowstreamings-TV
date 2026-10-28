@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.11.9
+
+- **OpenTV now shows up on the TV home screen.** The app was built with a placeholder vector
+  banner and an adaptive-only (XML) launcher icon, which the Fire TV and Google TV launchers
+  either rendered as a blank dark tile with no name on it or failed to render at all, so a
+  sideloaded install only appeared under Settings → Applications. The APK now ships a proper
+  320×180 **banner with the OpenTV wordmark** (Google TV / Android TV home screen) and plain
+  **PNG launcher icons at every density** (Fire TV app row, phones), which is what both
+  launchers expect. Install the update and the OpenTV tile appears in the apps row — on the
+  new Fire TV layout it lands at the end of the row, so hold Select → Move to bring it forward.
+
 ## 0.11.8
 
 - **Edit a saved provider.** Settings → Providers now has an **Edit** button on each provider, so you
