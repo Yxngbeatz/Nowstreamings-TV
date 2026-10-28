@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.11.10
+
+- **Fire TV: app row fix, take two.** v0.11.9 replaced the placeholder artwork but the stick still
+  wouldn't list OpenTV. Fire OS reads a sideloaded app's launcher icon straight out of the APK by
+  path, and it only looks in `res/drawable…` folders (a known Fire OS 7/8 quirk that leaves apps
+  with icons under `res/mipmap…` broken or missing). The icon now lives in `drawable-*dpi` and is
+  referenced as `@drawable/ic_launcher`, and the release build keeps real resource paths instead
+  of aapt2-shortened ones, so the stick can find it. After updating, uninstall OpenTV, restart the
+  stick and install it again from Downloader so the launcher re-reads the APK.
+
 ## 0.11.9
 
 - **OpenTV now shows up on the TV home screen.** The app was built with a placeholder vector
