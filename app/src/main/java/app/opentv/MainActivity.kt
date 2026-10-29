@@ -615,3 +615,4 @@ fun isRunningOnTelevision(context: Context): Boolean {
     return packageManager.hasSystemFeature("android.software.leanback") ||
         packageManager.hasSystemFeature("android.hardware.type.television")
 }
+
